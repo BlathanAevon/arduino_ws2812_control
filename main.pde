@@ -36,12 +36,9 @@ void draw() {
   int b = (int) blue(cp5.get(ColorWheel.class, "c").getRGB());
   int brt = (int) cp5.get(Slider.class, "brt").getValue();
 
-  // Check if the interval has passed since the last data sent
-
   // Concatenate RGB and brightness values into a single string
   String dataString = r + "," + g + "," + b + "," + brt + ";";
 
-  // Send the string over serial
   serial.write(dataString);
 
 }
