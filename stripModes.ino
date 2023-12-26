@@ -6,9 +6,6 @@
 
 microLED<NUM_LEDS, STRIP_PIN, MLED_NO_CLOCK, LED_WS2818, ORDER_GRB, CLI_AVER> strip;
 
-unsigned long interval = 1;  // Set the interval in milliseconds
-unsigned long lastReceivedTime = 0;
-
 void setup() {
   Serial.begin(921600);
   strip.setBrightness(255);  // Set maximum brightness
